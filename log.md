@@ -159,6 +159,7 @@ var islandPerimeter = function(grid) {
 };
 ``` 
 
+
 ## Day 4 & Day 5: March 10 & 11, 2021 
 
 ### Today's Progress: 
@@ -173,4 +174,36 @@ Code in "pocket-cart" repo
 ### Code
 ```
 see full source code in "pocket-cart" repo
+``` 
+
+
+## Day 6: March 12, 2021 
+
+### Today's Progress: 
+Continuing to learn Django and Kotlin. Continuing to practice leetcode questions and honing my problem solving skills. 
+
+### Thoughts: 
+Learning Kotlin has been more enjoyable and less challenging than I initially expected. Not to confuse with saying that it is easy, but overall I feel that after having multiple languages under my belt, learning Kotlin has been much more of a smooth transition and finding out nuances to each language is very enjoyable. Leetcode problems are engaging as well, especially after finding out the multitude of approaches that can be taken with any given problem. Some individuals find amazingly creative approaches. 
+
+### Problem/Link to work: 
+https://leetcode.com/problems/middle-of-the-linked-list/
+
+### Code
+```
+var middleNode = function(head) {
+    let length = 1;
+    let currNode = head; 
+    while (currNode.next){
+        currNode = currNode.next; 
+        length ++; 
+    }
+    
+    const mid = Math.floor(length/2);  
+    let currIdx = 0; 
+    while (currIdx != mid){
+        head = head.next; 
+        currIdx ++; 
+    }
+    return head; 
+};
 ``` 
