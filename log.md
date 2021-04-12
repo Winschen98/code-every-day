@@ -117,3 +117,60 @@ my_list = [
 print(sum_of_minimums(my_list))
     # should return 26
 ```
+
+
+## Day 3: March 9, 2021 
+
+### Today's Progress: 
+Working through practice problems on leetcode. Practicing white boarding ability by working through problems on paper. 
+
+### Thoughts: 
+Still need to work on 
+
+### Problem/Link to work: 
+https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
+### Code
+```
+var islandPerimeter = function(grid) {
+    const rows = grid.length; 
+    const columns = grid[0].length; 
+    let perimeter = 0; 
+    for (let i=0; i < rows; i++){
+        for (let j=0; j < columns; j++){
+            if (grid[i][j] === 1){
+                perimeter += 4; 
+                if (grid[i][j-1] === 1){
+                    perimeter --; 
+                }
+                if (grid[i][j+1] === 1){
+                    perimeter --;
+                }
+                if (grid[i - 1] && grid[i - 1][j] === 1){
+                    perimeter --; 
+                }
+                if (grid[i + 1] && grid[i + 1][j] === 1){
+                    perimeter --;
+                }
+            }
+        }   
+    }
+    return perimeter; 
+};
+``` 
+
+## Day 4 & Day 5: March 10 & 11, 2021 
+
+### Today's Progress: 
+Learning Android mobile development with Android Studio and Kotlin. Was able to complete the MVP of the app with basic add/delete funcitonality and displaying lists. 
+
+### Thoughts: 
+With time the structure of Android Studio began to resemble other code editors such as VSCode with which I have more familiarity. The biggest hurdles were getting aquainted with the syntax of Kotlin code and then to become more comfortable with the nuances of working in Android Studio. There were many dependencies and extensions that I had to become familiarized with in order for my application to run correctly. Additionally, learning to use constraint layouts versus CSS was another challenge. 
+
+### Problem/Link to work: 
+Code in "pocket-cart" repo
+
+### Code
+```
+see full source code in "pocket-cart" repo
+``` 
