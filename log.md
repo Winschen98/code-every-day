@@ -1,4 +1,4 @@
-## Day 0: March 6, 2021 
+## Day 0/1: March 6, 2021 
 
 ### Today's Progress: 
 Continuing to do coding challenges on Leetcode.
@@ -21,7 +21,7 @@ var maxDepth = function(root) {
 ``` 
 
 
-## Day 1: March 7, 2021 
+## Day 2: March 7, 2021 
 
 ### Today's Progress: 
 Continuing to do work through coding challenges.
@@ -77,7 +77,7 @@ addChecker( [-3, 2], 9 ) // => false
 ``` 
 
 
-## Day 2: March 8, 2021 
+## Day 3: March 8, 2021 
 
 ### Today's Progress: 
 Continuing to work on my first simple Android App with Kotlin and Android Studio. I've also picked up on an old Python project now that I am  revisiting Python. Lastly, as always, working through coding challenges everyday to keep the problem solving tooth sharp. 
@@ -119,7 +119,7 @@ print(sum_of_minimums(my_list))
 ```
 
 
-## Day 3: March 9, 2021 
+## Day 4: March 9, 2021 
 
 ### Today's Progress: 
 Working through practice problems on leetcode. Practicing white boarding ability by working through problems on paper. 
@@ -160,7 +160,7 @@ var islandPerimeter = function(grid) {
 ``` 
 
 
-## Day 4 & Day 5: March 10 & 11, 2021 
+## Day 5 & Day 6: March 10 & 11, 2021 
 
 ### Today's Progress: 
 Learning Android mobile development with Android Studio and Kotlin. Was able to complete the MVP of the app with basic add/delete funcitonality and displaying lists. 
@@ -177,7 +177,7 @@ see full source code in "pocket-cart" repo
 ``` 
 
 
-## Day 6: March 12, 2021 
+## Day 7: March 12, 2021 
 
 ### Today's Progress: 
 Continuing to learn Django and Kotlin. Continuing to practice leetcode questions and honing my problem solving skills. 
