@@ -257,3 +257,49 @@ var preorder = function(root) {
     return res
 };
 ```
+
+
+
+## Day 10: March 15, 2021 
+
+### Today's Progress: 
+Continuing to practice leetcode problems. practicing implentations of different data structures. Todays focus was to get a better grip of breaking down a problem and conveying ideas through pseudocode before code implementation. 
+
+### Thoughts: 
+It is still very much a challenge to very cohesively break down a problem into good pseudocode. One struggle I have is processing too many different approaches initially and getting caught up with efficiency from the get go. I think its much better to verbalize that you're willing to take a initial brute force approach and optimize the code at a further stage. 
+
+### Problem/Link to work: 
+https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/
+
+### Code
+```
+var sumRootToLeaf = function(root) {
+    // each path from root to leaf represents a binary number, each node being a digit
+    // make all possible traversals from root to leaf and track the binary num it produces
+    // return the sum of all binary nums that are recorded
+    
+    // can use a recursive approach
+    // if the node passed into current call does not exist return (base case)
+    // for each call we need to add the current node.val to a running sum
+    // if its a leaf node then add the sum to our final returned result 
+    // recursive call on node.left and node.right, pass along the running sum as well 
+    // since 0s and 1s are strings, we can pass along running sum as a string and then parseint after
+    // when all recursive calls are done return the result/total sum. 
+    
+    
+    let sum = 0; 
+    
+    function DFS(node, runningSum){   
+        if (!node) return 
+        runningSum += node.val; 
+        if (!node.left && !node.right){
+            sum += parseInt(runningSum, 2);
+            return; 
+        }
+        DFS(node.left, runningSum); 
+        DFS(node.right, runningSum); 
+    }
+    DFS(root, '');
+    return sum; 
+};
+```
