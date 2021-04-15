@@ -207,3 +207,53 @@ var middleNode = function(head) {
     return head; 
 };
 ``` 
+
+
+
+## Day 8: March 13, 2021 
+
+### Today's Progress: 
+Continuing to practice setting up a Django backend, both the monolithic framework and with django REST framework.
+
+### Thoughts: 
+Compared to the MERN stack, I find django to be far more intuitive and better for handling a quick CRUD setup. 
+
+### Problem/Link to work: 
+none
+
+### Code
+```
+No code to provide today
+``` 
+
+
+## Day 9: March 14, 2021 
+
+### Today's Progress: 
+Continuing to practice leetcode problems. practicing implentations of different data structures. 
+
+### Thoughts: 
+I remember intitially learning recursions and finding them incredibly complicated to comprehend. but by deconstructing the logic, it has become easier appraoch problems from a recursive perspective. 
+
+### Problem/Link to work: 
+https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+
+### Code
+```
+var preorder = function(root) {
+    // traversal function that recursively traverses node.children
+    // on each recursive call push the node.val into an array
+    // *for preorder, the node should be pushed prior to traversal 
+    
+    let res = []; 
+    function traverse(node){
+        if (!node) return;
+        res.push(node.val); 
+        for (let child of node.children){
+            traverse(child);
+        }
+    }
+    traverse(root)
+    return res
+};
+```
