@@ -303,3 +303,94 @@ var sumRootToLeaf = function(root) {
     return sum; 
 };
 ```
+
+## Day 11: March 17, 2021 
+
+### Today's Progress: 
+Refreshing on data science concepts and practicing Django in preparation for my next project. I am quite confident that in my next project I would like to deploy a machine learning model. Learning webscraping with Ruby and how to train classification/regression models on collected data. 
+
+### Thoughts: 
+Data Science was one of the initial topics that drew me into the world of programming. I was completely fascinated by the ability/potential of AI to entirely reinvent the way our world operates. I still strongly believe that there is tremendous good that can be provided through our application of machine learning models. I was previously intimidated by the complexity of many data science concepts, but now feel confident in being able to gradually absorb many of theses concepts and apply them at a smaller scale.
+
+### Problem/Link to work: 
+https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+
+### Code
+```
+var deleteDuplicates = function(head) {
+    let current = head;
+    while (current && current.next) {
+        if (current.val == current.next.val){
+            current.next = current.next.next; 
+        } else {
+            current = current.next;
+        }
+    }
+    return head;
+};
+```
+
+
+
+## Day 12: March 17, 2021 
+
+### Today's Progress: 
+Gaining more familiarity with different data structures, brushing up on simple linked list problems. 
+
+### Thoughts: 
+A fairly simple linked list problem. Can likely optimize so that the entire linked list does not need to be traversed.  
+
+### Problem/Link to work: 
+https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+
+### Code
+```
+var deleteDuplicates = function(head) {
+    let current = head;
+    while (current && current.next) {
+        if (current.val == current.next.val){
+            current.next = current.next.next; 
+        } else {
+            current = current.next;
+        }
+    }
+    return head;
+};
+```
+
+## Day 13: March 18, 2021 
+
+### Today's Progress: 
+Continuing to practice leetcode problems and particularly further learning to break down the logic that goes into writing recusrive algorithms. I had to seek out hints for this problem in order to arrive at my provided solution.  
+
+### Thoughts: 
+I found this problem to incredibly challenging. Despite being a spin on a previous quesiton I completed, being the maxDepth of a binary tree, this problem had many more edge cases to consider. 
+
+### Problem/Link to work: 
+https://leetcode.com/problems/diameter-of-binary-tree/
+
+### Code
+```
+var diameterOfBinaryTree = function(root) {
+    // problem 
+    // find the greatest distance between any two nodes on the binary tree
+    // return the number of edges between the two nodes 
+    
+    // recursive approach 
+    // the longest 'diameter' seems to always be the: 
+    // sum between the max depth of the right and left subtree (of root)
+    // can use dfs to traverse the height of left and right 
+    // use variables to keep track of the current max height of each subtree
+    
+    let maxDepth = 0;
+    function DFS(node){
+        if (!node) return 0; 
+        let left = DFS(node.left); 
+        let right = DFS(node.right);
+        maxDepth = Math.max(maxDepth, left + right); 
+        return Math.max(left, right) + 1; 
+    }
+    DFS(root); 
+    return maxDepth; 
+};
+```
