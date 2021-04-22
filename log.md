@@ -394,3 +394,73 @@ var diameterOfBinaryTree = function(root) {
     return maxDepth; 
 };
 ```
+
+## Day 14: March 19, 2021 
+
+### Today's Progress: 
+Began working on my ecommerce project using react and django. Began structuring the frontend of the project, revisiting major React concepts. Continuing to practice leetcode problems as well. 
+
+### Thoughts: 
+Typically prior to starting a project I prefer to scaffold out my ideas and general strcuture of my project. I find that by mentally creating a roadmap for a project, there tends to be less problems that arise down the line. One problem that I have had with previous projects is by building too fast early without consideration for how the project will scale at a later stage. 
+
+### Problem/Link to work: 
+code in fan-apparel repository.
+
+### Code
+```
+Code in fan-apparel repository. 
+```
+
+
+## Day 15: March 20, 2021 
+
+### Today's Progress: 
+Continuing to practice leetcode problems while working on my project. 
+
+### Thoughts: 
+There are times, like today, when solutions that would typically come naturally are not quite as obvious. The problem solved below is one such scenario. In such a case, it is best to practice a brute force apprach and simply focus on arriving at a solution, even if less than optimal. Today I was able to get good practice in that regard. 
+
+### Problem/Link to work: 
+https://leetcode.com/problems/maximum-ascending-subarray-sum/
+
+### Code
+```
+var maxAscendingSum = function(nums) {
+    let prevNum = nums[0]; 
+    let currSum = nums[0]; 
+    let maxSum = nums[0]; 
+    for(let i=1; i < nums.length; i++){
+        if (nums[i] > prevNum){
+            currSum += nums[i];
+            prevNum = nums[i];
+        } else {
+            if (currSum > maxSum){
+                maxSum = currSum; 
+            }
+            currSum = nums[i];
+            prevNum = nums[i];
+        }
+        // if last number also check the currSum to maxSum 
+        if (i == nums.length - 1 && currSum > maxSum){
+            maxSum = currSum;
+        }
+    }
+    return maxSum;
+};
+```
+
+## Day 16: March 21, 2021 
+
+### Today's Progress: 
+Today I focused on gaining progress in my current ecommerce site project. A lot of time was spent learning react-bootstrap in order to incorporate it into this project. 
+
+### Thoughts: 
+I began working on this project relatively late since I was unable to secure an idea I liked and then the past 2 days I also struggled to scaffold out my ideas and how I wanted to approach the project. Now that I have a general vision for the project and have an idea for how to build out the project, it has become much easier to gain headway. Today I learned a good deal about bootstrap and was able to incorporate it heavily in my project. With how many working components that come straight out the box with bootstrap, it certainly streamlines a lot of design work. 
+
+### Problem/Link to work: 
+code in fan-apparel repository.
+
+### Code
+```
+Code in fan-apparel repository. 
+```
